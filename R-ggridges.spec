@@ -4,7 +4,7 @@
 #
 Name     : R-ggridges
 Version  : 0.4.1
-Release  : 1
+Release  : 2
 URL      : https://cran.r-project.org/src/contrib/ggridges_0.4.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggridges_0.4.1.tar.gz
 Summary  : Ridgeline Plots in 'ggplot2'
@@ -35,11 +35,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521230511
+export SOURCE_DATE_EPOCH=1521234657
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521230511
+export SOURCE_DATE_EPOCH=1521234657
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
