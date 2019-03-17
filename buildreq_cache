@@ -2,9 +2,13 @@
 R-DAAG
 R-assertthat
 R-dplyr
+R-forcats
 R-ggplot2
 R-ggplot2movies
 R-labeling
+R-mime
 R-plyr
+R-purrr
 R-scales
+R-utf8
 R-viridis

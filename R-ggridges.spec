@@ -4,20 +4,28 @@
 #
 Name     : R-ggridges
 Version  : 0.5.1
-Release  : 21
+Release  : 22
 URL      : https://cran.r-project.org/src/contrib/ggridges_0.5.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggridges_0.5.1.tar.gz
 Summary  : Ridgeline Plots in 'ggplot2'
 Group    : Development/Tools
 License  : GPL-2.0
+Requires: R-forcats
+Requires: R-mime
+Requires: R-purrr
+Requires: R-utf8
 BuildRequires : R-DAAG
 BuildRequires : R-assertthat
 BuildRequires : R-dplyr
+BuildRequires : R-forcats
 BuildRequires : R-ggplot2
 BuildRequires : R-ggplot2movies
 BuildRequires : R-labeling
+BuildRequires : R-mime
 BuildRequires : R-plyr
+BuildRequires : R-purrr
 BuildRequires : R-scales
+BuildRequires : R-utf8
 BuildRequires : R-viridis
 BuildRequires : buildreq-R
 
@@ -34,11 +42,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538150146
+export SOURCE_DATE_EPOCH=1552852649
 
 %install
+export SOURCE_DATE_EPOCH=1552852649
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1538150146
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,8 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library ggridges|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  ggridges || :
 
 
 %files
@@ -113,3 +120,16 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/ggridges/help/paths.rds
 /usr/lib64/R/library/ggridges/html/00Index.html
 /usr/lib64/R/library/ggridges/html/R.css
+/usr/lib64/R/library/ggridges/tests/figs/deps.txt
+/usr/lib64/R/library/ggridges/tests/figs/geom-density-ridges/geom-density-ridges-basic.svg
+/usr/lib64/R/library/ggridges/tests/figs/geom-density-ridges/geom-density-ridges-no-trailing-lines.svg
+/usr/lib64/R/library/ggridges/tests/testthat.R
+/usr/lib64/R/library/ggridges/tests/testthat/Rplots.pdf
+/usr/lib64/R/library/ggridges/tests/testthat/test_geom_density_ridges.R
+/usr/lib64/R/library/ggridges/tests/testthat/test_geom_gradient.R
+/usr/lib64/R/library/ggridges/tests/testthat/test_geom_vridgeline.R
+/usr/lib64/R/library/ggridges/tests/testthat/test_scale_cyclical.R
+/usr/lib64/R/library/ggridges/tests/testthat/test_stat_binline.R
+/usr/lib64/R/library/ggridges/tests/testthat/test_stat_density_ridges.R
+/usr/lib64/R/library/ggridges/tests/testthat/test_theme_ridges.R
+/usr/lib64/R/library/ggridges/tests/testthat/test_utils.R
