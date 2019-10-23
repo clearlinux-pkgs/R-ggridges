@@ -4,25 +4,15 @@
 #
 Name     : R-ggridges
 Version  : 0.5.1
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/ggridges_0.5.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggridges_0.5.1.tar.gz
 Summary  : Ridgeline Plots in 'ggplot2'
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-DAAG
-Requires: R-RColorBrewer
-Requires: R-forcats
 Requires: R-ggplot2
-Requires: R-ggplot2movies
-Requires: R-gridExtra
-Requires: R-labeling
-Requires: R-latticeExtra
-Requires: R-munsell
 Requires: R-plyr
-Requires: R-purrr
 Requires: R-scales
-Requires: R-viridis
 Requires: R-withr
 BuildRequires : R-DAAG
 BuildRequires : R-RColorBrewer
@@ -39,6 +29,7 @@ BuildRequires : R-scales
 BuildRequires : R-viridis
 BuildRequires : R-withr
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 ggridges
@@ -53,10 +44,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562199586
+export SOURCE_DATE_EPOCH=1571837938
 
 %install
-export SOURCE_DATE_EPOCH=1562199586
+export SOURCE_DATE_EPOCH=1571837938
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
