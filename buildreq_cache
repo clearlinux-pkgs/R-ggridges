@@ -1,12 +1,3 @@
-0.5.1
-R-DAAG
-R-RColorBrewer
+0.5.2
 R-forcats
 R-ggplot2movies
-R-gridExtra
-R-labeling
-R-latticeExtra
-R-munsell
-R-purrr
-R-viridis
-util-linux
