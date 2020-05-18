@@ -4,18 +4,19 @@
 #
 Name     : R-ggridges
 Version  : 0.5.2
-Release  : 34
+Release  : 35
 URL      : https://cran.r-project.org/src/contrib/ggridges_0.5.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggridges_0.5.2.tar.gz
 Summary  : Ridgeline Plots in 'ggplot2'
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-forcats
+Requires: R-dplyr
 Requires: R-ggplot2
+Requires: R-ggplot2movies
 Requires: R-plyr
 Requires: R-scales
 Requires: R-withr
-BuildRequires : R-forcats
+BuildRequires : R-dplyr
 BuildRequires : R-ggplot2
 BuildRequires : R-ggplot2movies
 BuildRequires : R-plyr
@@ -38,21 +39,22 @@ Status](https://img.shields.io/codecov/c/github/wilkelab/ggridges/master.svg)](h
 
 %prep
 %setup -q -c -n ggridges
+cd %{_builddir}/ggridges
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1578888709
+export SOURCE_DATE_EPOCH=1589768348
 
 %install
-export SOURCE_DATE_EPOCH=1578888709
+export SOURCE_DATE_EPOCH=1589768348
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
