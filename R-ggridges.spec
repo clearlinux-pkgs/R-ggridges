@@ -4,7 +4,7 @@
 #
 Name     : R-ggridges
 Version  : 0.5.4
-Release  : 54
+Release  : 55
 URL      : https://cran.r-project.org/src/contrib/ggridges_0.5.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggridges_0.5.4.tar.gz
 Summary  : Ridgeline Plots in 'ggplot2'
